@@ -10,8 +10,8 @@ fn main() {
         guess.clear();
         println!("Enter a guess:");
         io::stdin().read_line(&mut guess).expect("Failed on input");
-        println!("You guessed {}", guess);
-        let guess: i32 = match guess.trim().parse(){
+        println!("You guessed: {}", guess);
+        let guess: i32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => continue,
         };
@@ -21,8 +21,9 @@ fn main() {
             Ordering::Equal => {
                 println!("CORRECT");
                 break;
-            },
+            }
         }
-        println!("The secret number is {}", secret_number);
+        //println!("The secret number is {}", secret_number);
+        //uncomment to make this boring
     }
 }
